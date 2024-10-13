@@ -1,0 +1,38 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "schoolsyncclassmanagers",
+          "appId": "1:1047200668336:android:ee89401a5ad2465bf0f975",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "schoolsyncclassmanagers",
+          "configurations": {
+            "android": "1:1047200668336:android:ee89401a5ad2465bf0f975",
+            "ios": "1:1047200668336:ios:48019efc611c4d93f0f975"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}

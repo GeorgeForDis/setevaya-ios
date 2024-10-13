@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047200668336",
+    "project_id": "schoolsyncclassmanagers",
+    "storage_bucket": "schoolsyncclassmanagers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047200668336:android:ee89401a5ad2465bf0f975",
+        "android_client_info": {
+          "package_name": "com.ForDis.setevaya_student"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU0u4qo4gwOtAzbTiv0GJd7tqAujQl8PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

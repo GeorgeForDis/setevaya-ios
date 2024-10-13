@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        kotlin_version = '2.0.20'
+        firebaseMessagingVersion = '24.5.0'
+        googleServicesVersion = '4.3.15'
+        flutterLocalNotificationsVersion = '15.0.0'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.1.0"
+        classpath "com.google.gms:google-services:$googleServicesVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs.add('-Xlint:deprecation')
+        }
+    }
+}
